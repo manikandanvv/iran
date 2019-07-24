@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamic change</title>
+	<script type="text/javascript">
+		function hi() {
+			var e=document.getElementById('left').value;
+			document.getElementById('ee').style.backgroundColor=e;
+			var f=document.getElementById('ff').value;
+			document.getElementById('ee').style.fontFamily=f;
+			var s=document.getElementById('fs').value;
+			document.getElementById('ee').style.fontSize=s;
+		}
+	</script>
+	<style type="text/css">
+		table,tr,td
+		{
+			border: 1px solid black;
+			border-spacing: 5px;
+		}
+		td{
+			padding: 5px 5px;
+		}
+	</style>
+</head>
+<body>
+    <div class="bo">
+    	<table id="tbl">
+    		<tr>
+    			<td>Background color</td>
+    			<td>
+    				<input type="text" name="left" id="left">
+    	            <input type="color" name="color" id="color" oninput="left.value=color.value" style="height: 18px">
+    			</td>
+    		</tr>
+    		<tr>
+    			<td>Font family</td>
+    			<td>
+    				<select name="ff" id="ff">
+    					<option value="serif">serif</option>
+    					<option value="sans-serif">sans-serif</option>
+    					<option value="cursive">cursive</option>
+    					<option value="monospace">monospace</option>
+    					<option value="fantasy">fantasy</option>
+    				</select>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td>font-size</td>
+    			<td>
+    				<select id="fs">
+    					<option value="20px">20</option>
+    					<option value="40px">40</option>
+    					<option value="50px">50</option>
+    					<option value="60px">60</option>
+    					<option value="65px">65</option>
+    				</select>
+    			</td>
+    		</tr>
+    		<tr><td style="border: none;"><button onclick="hi()">Apply</button></td></tr>
+    	</table>
+    	<div id="ee" style="height: 300px;width: 800px; background-color: blue">
+    		<h2>Manikandan v</h2>
+    	</div>
+    </div>
+</body>
+</html>

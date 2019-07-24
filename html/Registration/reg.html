@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student registration</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="main">
+  	<div class="head">
+  		<h2><center>STUDENT REGISTRATION</center></h2>
+  	</div>
+  	<form name="frm" id="frmm" action="#">
+  	<div class="reeg">
+  	   <table>
+  	   	<th>Student Details<span style="color: red">*</span></th>
+  		  <tr><td>Register No</td><td><input type="text" name="regno" id="reg" required=""></td></tr>
+  		  <tr><td>Name</td><td><input type="text" name="Name" required=""></td></tr>
+  		  <tr><td>Date of Birth</td><td><input type="date" name="Date_of_Birth"></td></tr>
+  		  <tr><td>Gender</td><td><input type="radio" name="redAnswer" id="nb" value="MALE">MALE
+  		  	<input type="radio" name="redAnswer" id="nb" value="FEMALE">FEMALE</td></tr>
+  	    </table>
+  	</div>
+  <div class="reeg" >
+  	<table cellspacing="2">
+  		<th>College Details<span style="color: red">*</span></th>
+  		<tr><td>College Name</td><td>
+  				<select name="UG_College_Name" required="">
+  					<option value="none"></option>
+  					<option value="KSRCT">KSRCT</option>
+  				</select>
+  			</td></tr>
+  		<tr><td>Degree</td><td>
+  				<select name="UG_Degree" required="">
+  					<option></option>
+  					<option value="BE">BE</option>
+  					<option value="BTECH">BTECH</option>
+  				</select>
+  			</td></tr>
+  			<tr>
+  				<td>Branch</td>
+  				<td>
+  					<select name="UG_Branch" required="">
+  						<option></option>
+  						<option value="CSE">CSE</option>
+  						<option value="IT">IT</option>
+  						<option value="E&I">E&I</option>
+  						<option value="EEE">EEE</option>
+  						<option value="ECE">ECE</option>
+  						<option value="FTECH">FTECH</option>
+  						<option value="NANO">NANO</option>
+  						<option value="BIOTECH">BIOTECH</option>
+  					</select>
+  				</td>
+  			</tr>
+  			<tr><td>1st sem SGPA</td><td><input type="text" name="UG_1_Sem_SGPA" size="5" required=""></td>
+  				<td>2nd sem SGPA</td><td><input type="text" name="UG_2_Sem_SGPA" size="5" required=""></td>
+  			</tr>
+  			<tr><td>3rd sem SGPA</td><td><input type="text" name="UG_3_Sem_SGPA" size="5" required=""></td>
+  				<td>4th sem SGPA</td><td><input type="text" name="UG_4_Sem_SGPA" size="5" required=""></td>
+  			</tr>
+  			<tr><td>5th sem SGPA</td><td><input type="text" name="UG_5_Sem_SGPA" size="5" required=""></td>
+  				<td>6th sem SGPA</td><td><input type="text" name="UG_6_Sem_SGPA" size="5" required=""></td>
+  			</tr>
+  			<tr><td>7th sem SGPA</td><td><input type="text" name="UG_6_Sem_SGPA" size="5" required=""></td>
+  				<td>8th sem SGPA</td><td><input type="text" name="UG_8_Sem_SGPA" size="5" required=""></td>
+  			</tr>
+  			<tr><td>UG CGPA current sem</td><td><input type="text" name="UG_CGPA_Current_Sem" size="5" required=""></td>
+  			</tr>
+  			<tr><td>UG Current arrear details</td><td><input type="text" name="UG_Current_Arrear det" size="5" required=""></td>
+  			</tr>
+  			<tr>
+  				<td>UG Arrear status</td><td>
+  					<select name="UG_Arrear_Status" required="">
+  						<option></option>
+  						<option value="NHA">NHA</option>
+  						<option value="NSA">NSA</option>
+  						<option value="YES">YES</option>
+  					</select>
+  				</td>
+  			</tr>
+  			<tr>
+  				<td>UG NO of History of arrears(if no NSA) </td><td><input type="text" name="UG_Arrear_Status " size="5" ></td>
+  			</tr>
+  			<tr>
+  				<td>UG Class obtained</td><td><input type="text" name="UG_Class_obtained" size="5" required=""></td>
+  			</tr>
+
+  	</table>
+  </div>
+  <div class="reeg">
+  	<table>
+  		<tr><td>Skillset</td><td><input type="text" name="Skillset"></td></tr>
+  		<tr><td>Value added course</td><td><input type="text" name="Value_Added_Course"></td></tr>
+  		<tr><td>GATE TANCET score</td><td><input type="text" name="GATE_TANCET_score"></td></tr>
+  		<tr><td>Language Known(other then tamil english)</td><td><input type="text" name="l_known"></td>
+  		</tr>
+  	</table>
+  </div>
+  <div class="reeg">
+  	<table>
+  		<th>SSLC Info<span style="color: red">*</span></th>
+  		<tr><td>10th parcentage</td><td><input type="text" name="sslc_Percentage" required=""></td></tr>
+  		<tr><td>10th YOP</td><td><input type="text" name="sslc_YOP" required=""></td></tr>
+  		<tr><td>10th Board</td><td><input type="text" name="10_Board" ></td></tr>
+  		<tr><td>10th School Name with Address</td>
+  		<td><textarea name="10_School_Name_with_Address" rows="8" cols="21"></textarea>
+  		</td></tr>
+  	</table>
+  	
+  </div>
+  <div class="reeg">
+  	<table>
+  		<th>HSC Info</th>
+  		<tr><td>12th parcentage</td><td><input type="text" name="12th_Percentage"></td></tr>
+  		<tr><td>12th YOP</td><td><input type="text" name="12th_YOP"></td></tr>
+  		<tr><td>12th Board</td><td><input type="text" name="12th_Board"></td></tr>
+  		<tr><td>12th Stream</td><td><input type="text" name="12th_Stream"></td></tr>
+  		<tr><td>12th School Name with Address</td>
+  		<td><textarea name="12th_School_Name_with_Address" rows="8" cols="21"></textarea>
+  		</td></tr>
+  	</table>
+  </div>
+  <div class="reeg">
+  	<table>
+  		<th>Diploma</th>
+  		<tr><td>Diploma parcentage</td><td><input type="text" name="Diploma_Percentage"></td></tr>
+  		<tr><td>Diploma Branch</td><td><input type="text" name="Diploma_Branch"></td></tr>
+  		<tr><td>Diploma YOP</td><td><input type="text" name="Diploma_YOP"></td></tr>
+  		<tr><td>Diploma class Obtained</td><td><input type="text" name="Diploma_Class_Obtained"></td></tr>
+  		<tr><td>College Name with Address</td>
+  		<td><textarea name="Diploma_college_Name_with_Address" rows="8" cols="21"></textarea>
+  		</td></tr>
+  	</table>
+  </div>
+  <div class="reeg">
+  	<table>
+  		<th>Personal Details</th>
+  		<tr><td>Email<span style="color: red">*</span></td><td><input type="email" name="email" required=""></td></tr>
+  		<tr><td>Mobile NO<span style="color: red">*</span></td><td><input type="text" name="mobile_no" maxlength="10" required=""></td></tr>
+  		<tr><td>Addres</td><td><textarea name="Addres" rows="8" cols="21" required=""></textarea></td></tr>
+  		<tr><td>Father Name</td><td><input type="text" name="Father_Name"></td></tr>
+  		<tr><td>Father occupation</td><td><input type="text" name="Father_occupation"></td></tr>
+  		<tr><td>Father Mob No</td><td><input type="text" name="Father_mobno" maxlength="10"></td></tr>
+  		<tr><td>Mother Name</td><td><input type="text" name="Mother_Name"></td></tr>
+  		<tr><td>Mother occupation</td><td><input type="text" name="Mother_occupation"></td></tr>
+  		<tr><td>Mother Mob No</td><td><input type="text" name="Mother_mobno" maxlength="10"></td></tr>
+  		<tr><td>Community</td><td><input type="text" name="Community"></td></tr>
+  		<tr><td>Boading</td><td>
+  			<select name="Boading" required="">
+  				<option></option>
+  				<option value="Dayscholar">Dayscholar</option>
+  				<option value="Hostller">Hostller</option>
+  			</select>
+  		</td></tr>
+  		<tr><td>12 cutOff</td><td><input type="text" name="12_cutoff" required=""></td></tr>
+  		<tr><td>Category</td><td>
+  			<select name="Category">
+  				<option></option>
+  				<option value="counselling">Counselling</option>
+  				<option value="Management">Management</option>
+  			</select>
+  		</td></tr>
+  		<tr><td>First Graduate</td><td>
+  			<select name="first_graduate" required="">
+  				<option></option>
+  				<option value="YES">YES</option>
+  				<option value="NO">NO</option>
+  			</select></td></tr>
+  		<tr><td>Blood Group</td><td><input type="text" name="Blood_group"></td></tr>
+  		<tr><td>Register for Placement</td><td>
+  			<select name="Register_for_Placement">
+  				<option></option>
+  				<option value="YES">YES</option>
+  				<option value="NO">NO</option>
+  			</select></td></tr>
+  			<tr><td>Placement Details</td>
+  				<td><textarea name="Placement_Details" rows="8" cols="21"></textarea></tr>
+  			<tr><td>Passport No<span style="color: red">*</span></td>
+  				<td><input type="text" name="Passport_no"></td></tr>
+  				<tr><td>Adhar No<span style="color: red">*</span></td><td><input type="text" name="adhar_no"></td></tr>
+  				<tr><td>NO of siblings</td><td><input type="text" name="No_of_siblings"></td></tr>
+  				<tr><td>Sibling Details</td>
+  					<td>
+  						<textarea name="Sibling Details" rows="8" cols="21"></textarea>
+  					</td></tr>
+  	</table>
+  </div>
+  <input type="submit" name="submit" value="Register" style="margin-left: 170px; width: 200px">
+</form>
+  </div>
+</body>
+</html>

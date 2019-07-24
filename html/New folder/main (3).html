@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>puzzle</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var c1=0;
+		var c2=0;
+		var c3=0; 
+		var t=0;
+  $(".img1").click(function(){
+    $("#one").animate({
+    	height:'toggle'	
+    },function() {
+    	if(t==0){
+    		$("#ge").css('background-color','blue')
+    	}
+    	else{
+    		$("#ge").css('background-color','yellow')
+    	}
+
+    })
+    t++;
+
+    if(c1%2==0){$(".w1").animate({height: '248px'}, 10000,function() {
+    	$("#one").hide();
+    	$("#gu").stop();
+
+    })
+    	$("#gu").animate({
+    		height:'-=100px'
+         },20000)
+   }else{
+   	$(".w1").stop();
+   	$("#gu").stop();
+   }
+   c1++;
+  });
+  $(".img2").click(function(){
+    $("#two").animate({
+    	height:'toggle'
+    },function() {
+    	$("#ge").css('background-color','red')
+    })
+    if(c2%2==0){
+    	$(".w2").animate({height: '248px'}, 10000,function() {
+    	$("#two").hide();
+    	$("#gu").stop();
+    })
+
+    	$("#gu").animate({
+    		height:'-=100px'
+         },20000)
+    }else{
+    	$(".w2").stop();
+    	$("#gu").stop();
+    }
+    c2++;
+  });
+  $(".img3").click(function(){
+    $("#three").animate({
+    	height:'toggle'
+    },function() {
+    	$("#ge").css('background-color','green')
+    })
+    if(c3%2==0){
+    	$(".w3").animate({height: '248px'}, 10000,function() {
+    	$("#three").hide();
+    	$("#gu").stop();
+    })
+    	
+    	$("#gu").animate({
+    		height:'-=100px'
+         },20000)
+    }
+    else{
+    	$(".w3").stop();
+    	$("#gu").stop();
+
+    }
+    c3++;
+  });
+});
+</script>
+<body>
+    <div class="box1">
+    	<a href="#"><img src="man.png" class="img1"></a>
+    	<div class="c1"></div>
+    	
+    </div>
+    <div class="w1"></div>
+    <div class="box2">
+    	<a href="#"><img src="man.png" class="img2"></a>
+    	<div class="c2"></div>
+    </div>
+    <div class="w2"></div>
+    <div class="box3">
+    	<a href="#"><img src="man.png" class="img3"></a>
+    	<div class="c3"></div>
+    </div>
+    <div class="w3"></div>
+    <div class="box4">
+    	<div class="fii" id="ge"></div>
+    	<div class="fii" style="background-color: white;" id="gu"></div>
+    </div>
+    	<div class="f2" style="background-color: blue; display: none;" id="one"></div>
+    	<div class="f2" style="background-color: red;display: none; margin-left: 527px;" id="two"></div>
+    	<div class="f2" style="background-color: green;display: none;margin-left: 789px; " id="three"></div>
+</body>
+</html>

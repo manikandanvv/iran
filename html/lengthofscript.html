@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hospital Management</title>
+</head>
+<script type="text/javascript">
+	
+		var name=document.getElementById('name').value;
+		var age=document.getElementById('age').value;
+		var dob=document.getElementById('dob').value;
+		var add=document.getElementById('add').value;
+
+	
+</script>
+<style type="text/css">
+	.mai{
+		padding: 5px 5px;
+		text-align: left;
+		border: 1px solid black;
+		width: 300px;
+		height: 300px;
+		margin-left: 400px;
+		margin-top: 50px;
+		font-family: cursive;
+	}
+	label{
+    
+		color: red;
+	}
+
+</style>
+<body>
+	<div class="mai">
+		<h2 align="center">Irans Hospital</h2>
+		<table>
+		<tr>
+			<td>Patient name:</td>
+			<td><input type="text" id="name" name="name" ></td>
+		</tr>
+		<tr>
+			<td>Patient age:</td>
+			<td><input id="age" required><td>
+		</tr>
+		<tr>
+		    <td>Date of birth:</td>
+		    <td><input type="date" id="dob"></td>
+	    </tr>
+	    <tr>
+		   <td>Address:</td>
+		   <td><input type="text" id="add"></td>
+	    </tr>
+	    <tr><td></td>
+		<td><input type="submit" name="" value="submit" onclick="hi()"></td>
+	    </tr>
+		</table>
+		<label id="res"></label>
+		<label id="ans" ></label>
+	</div>
+	<script type="text/javascript">
+		function hi() {
+			
+		
+		var x=document.scripts.length;
+		document.getElementById("ans").innerHTML="Length of script collections:"+x;
+	}
+	</script>
+
+</body>
+</html>

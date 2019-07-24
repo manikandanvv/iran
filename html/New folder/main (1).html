@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>puzzle</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+  $(".img1").click(function(){
+  	var h=$(".w2").height();
+    $("#one").animate({
+    	height:'+=180px'	
+    });
+    $(".w1").animate({height: '248px'}, 10000,function() {
+    	$("#one").hide();
+    });
+  });
+  $(".img2").click(function(){
+    $("#two").animate({
+    	height:'toggle'
+    });
+    $(".w2").animate({height: '248px'}, 10000,function() {
+    	$("#two").hide();
+    });
+  });
+  $(".img3").click(function(){
+    $("#three").animate({
+    	height:'toggle'
+    });
+    $(".w3").animate({height: '248px'}, 10000,function() {
+    	$("#three").hide();
+    });
+  });
+});
+</script>
+<body>
+    <div class="box1">
+    	<a href="#"><img src="man.png" class="img1"></a>
+    	<div class="c1"></div>
+    	<div class="f2" style="background-color: blue; display: none;" id="one"></div>
+    	
+    </div>
+    <div class="w1"></div>
+    <div class="box2">
+    	<a href="#"><img src="man.png" class="img2"></a>
+    	<div class="c2"></div>
+    	<div class="f2" style="background-color: red;display: none;" id="two"></div>
+    </div>
+    <div class="w2"></div>
+    <div class="box3">
+    	<a href="#"><img src="man.png" class="img3"></a>
+    	<div class="c3"></div>
+    	<div class="f2" style="background-color: green;display: none;" id="three"></div>
+    </div>
+    <div class="w3"></div>
+    <div class="box4">
+    	
+    </div>
+</body>
+</html>
