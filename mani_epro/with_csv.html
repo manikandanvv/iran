@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mobile and accessories</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="">
+  <script type="text/javascript" src="bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="jquery.slim.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    
+</head>
+<style type="text/css">
+  #iop{
+    height: 260px;
+        text-align: center;
+        padding: 40px 20px;
+        font-size: 10px;
+        box-shadow:3px 3px 5px 6px #ccc;
+        cursor: pointer;
+        margin-left: 40px;
+    }
+    #iop img:hover{
+        transform: scale(1.1);
+        transition-duration: 2s;
+    }
+    #iop img{
+        width: 150px;
+        height: 100px;
+        margin-left: 20px;
+        margin-top: -10px;
+
+    }
+    .ss{
+      width: 100px;
+      text-align: center;
+    }
+    .ss p{
+      margin-left: 70px;
+    }
+    .row{
+      width: 100%;
+    }
+    .mnu{
+      padding: 10px 30px;
+      margin-left: 200px;
+      margin-top: -615px;
+    }
+
+     button{
+        background-color: white;
+        border: none;
+        background-color: orange;
+        font-size: 13px;
+        color: white;
+        width: 200px;
+        height: 30px;
+        margin-left: 0px;
+        padding: 0px 15px;
+        color: black;
+        cursor: pointer;
+    }
+    #bn{
+        text-align: left;
+        padding: 10px 10px;
+        font-size: 12px;
+        width: 200px;
+        font-family: Courier New, monospace;
+    }
+    #bn b{
+        color: black;
+    }
+    i{
+     margin-left: -10px;
+    }
+    button:hover{
+        background-color: white;
+        border: 1px solid black;
+        color: black;
+
+    }
+    .ss .det{
+        margin-left: -40px;
+        margin-top: 20px;
+        font-size: 10px;
+        width: 200px;
+    }
+</style>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top" id="navb">
+  <div class="container">
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">SERVICE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">CONTACT</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+ <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">MENU</div>
+      <div class="list-group list-group-flush">
+        <a href="main.html" class="list-group-item list-group-item-action bg-light">MAIN</a>
+        <a href="s1.html" class="list-group-item list-group-item-action bg-light">MOBILE & ACCESSORIES</a>
+        <a href="s2.html" class="list-group-item list-group-item-action bg-light">LAPTOPS</a>
+        <a href="s3.html" class="list-group-item list-group-item-action bg-light">ELCTRONICS & HOME APPLIANCE</a>
+        <a href="s4.html" class="list-group-item list-group-item-action bg-light">BEAUTY ITEMS</a>
+
+      </div>
+    </div>
+    <div align="center" style="margin-top: -400px">
+     <button type="button" name="load_data" id="load_data" class="btn btn-info">Load Data</button>
+    </div>
+
+
+    
+
+</body>
+<script>
+$(document).ready(function(){
+ $('#load_data').click(function(){
+  $.ajax({
+   url:"exp.csv",
+   dataType:"text",
+   success:function(data)
+   {
+    var employee_data = data.split(/\r?\n|\r/);
+    var table_data = '<div class="mnu">';
+    for(var count = 0; count<employee_data.length; count++)
+    {
+     var cell_data = employee_data[count].split(",");
+     table_data += '<div class="row">';
+     
+      table_data += '<div class="col-xl-3" id="iop">';
+      table_data += '<div class="ss">';
+      table_data += '<div class="thumb">';
+       table_data += '<img src="'+cell_data[3]+'" alt="">';
+       table_data += ' </div>';
+       table_data += '<div class="det">';
+       table_data += '<p>'+cell_data[0]+'</p>';
+       table_data += '<div class="star_prise d-flex justify-content-between" id="bn">';
+       table_data += '<button class="two"><i class="fa fa-shopping-cart"></i><b> ADD TO CART</b></button>';
+       table_data += '</div>';
+       table_data += '</div>';
+       table_data += '</div>';
+       
+
+     table_data += '</div>';
+    }
+    table_data += '</div>';
+    $('#employee_table').html(table_data);
+   }
+  });
+ });
+ 
+});
+</script>
+</html>
